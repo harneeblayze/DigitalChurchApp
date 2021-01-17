@@ -37,26 +37,6 @@ platform :android do
     #gradle(task: "test")
   end
 
-  # send slack success notification after distribution completes
-          slack(
-            slack_url: "https://hooks.slack.com/services/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",
-            message: "New build is available for testing",
-            success: true,
-            default_payloads: [:git_branch, :last_git_commit_message]
-          )
-      end
-
-   # handle exception
-      error do |lane, exception, options|
-          # send slack failure notification
-          slack(
-              message: "Build failed with exception: #{exception}",
-              slack_url: "https://hooks.slack.com/services/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",
-              success: false,
-              default_payloads: [:git_branch, :last_git_commit_message]
-          )
-      end
-
   desc "Submit a new Beta Build to Crashlytics Beta"
   lane :beta do
     gradle(task: "clean assembleRelease")
