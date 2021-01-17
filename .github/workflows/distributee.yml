@@ -34,7 +34,7 @@ jobs:
       env:
           FIREBASE_CREDENTIALS: ${{ secrets.DIGITALCHURCH_FIREBASE_CREDENTIALS }}
     - name: Install bundler
-      run: gem install bundler
+      run: sudo gem install bundler
     - name: Distribute app with 🔥 App Distribution 🚀
       run:
            bundle exec fastlane distribute
