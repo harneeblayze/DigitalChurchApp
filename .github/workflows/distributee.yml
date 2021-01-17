@@ -33,9 +33,10 @@ jobs:
           base64 -d -i firebase_credentials.json.b64 > digitalchurch_firebase_credentials.json
       env:
           FIREBASE_CREDENTIALS: ${{ secrets.DIGITALCHURCH_FIREBASE_CREDENTIALS }}
+    - name: Install bundler
+      run: gem install bundler
     - name: Distribute app with 🔥 App Distribution 🚀
       run:
-           gem install bundler
            bundle exec fastlane distribute
       env:
           FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
