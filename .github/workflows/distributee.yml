@@ -29,10 +29,10 @@ jobs:
        #   bundle install --jobs 4 --retry 3
     - name: Create Firebase Service Credentials file
       run: |
-          echo "$DIGITALCHURCH_FIREBASE_CREDENTIALS" > firebase_credentials.json.b64
+          echo "$FIREBASE_CREDENTIALS" > firebase_credentials.json.b64
           base64 -d -i firebase_credentials.json.b64 > digitalchurch_firebase_credentials.json
-          env:
-          DIGITALCHURCH_FIREBASE_CREDENTIALS: ${{ secrets.DIGITALCHURCH_FIREBASE_CREDENTIALS }}
+      env:
+          FIREBASE_CREDENTIALS: ${{ secrets.DIGITALCHURCH_FIREBASE_CREDENTIALS }}
     - name: Distribute app with 🔥 App Distribution 🚀
       run: bundle exec fastlane distribute
       env:
