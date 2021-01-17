@@ -28,7 +28,7 @@ platform :android do
 
      # submit build to firebase app distribution
             firebase_app_distribution(
-                service_credentials_file: "digitalchurchapp_firebase_credentials.json",
+                service_credentials_file: "../app/digitalchurchapp_firebase_credentials.json",
                 app: "1:185434120772:android:6dd6767b3636866ec55211",
                 release_notes: "First cicd release using fastlane",
                 testers: "sleydean@gmail.com, hotuoniyo@gmail.com, alozieuche17@gmail.com, rachaeliwulunmor@gmail.com",
