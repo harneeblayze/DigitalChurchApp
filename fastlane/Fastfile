@@ -1,0 +1,70 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+  desc "Submit a new Beta Build to Firebase app distribution"
+  lane :test do
+
+    # build the release variant
+    build_android_app(task: "assembleRelease")
+
+    # changelog from a txt file is passed as the release note
+    #changelog = File.read("../changelog.txt")
+
+
+     # submit build to firebase app distribution
+            firebase_app_distribution(
+                app: "1:185434120772:android:6dd6767b3636866ec55211",
+                release_notes: "First cicd release using fastlane",
+                testers: "sleydean@gmail.com, hotuoniyo@gmail.com, alozieuche17@gmail.com, rachaeliwulunmor@gmail.com",
+                firebase_cli_token:ENV["1//03rd7jgEPDIk8CgYIARAAGAMSNwF-L9IrLJzx-oB12ajBN7Wan7XbD1nJ300KyzEwA6wVyg88VdMizctdNnKZFzd2J6p-TSo0RyU"]
+            )
+
+    #gradle(task: "test")
+  end
+
+  # send slack success notification after distribution completes
+          slack(
+            slack_url: "https://hooks.slack.com/services/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",
+            message: "New build is available for testing",
+            success: true,
+            default_payloads: [:git_branch, :last_git_commit_message]
+          )
+      end
+
+   # handle exception
+      error do |lane, exception, options|
+          # send slack failure notification
+          slack(
+              message: "Build failed with exception: #{exception}",
+              slack_url: "https://hooks.slack.com/services/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",
+              success: false,
+              default_payloads: [:git_branch, :last_git_commit_message]
+          )
+      end
+
+  desc "Submit a new Beta Build to Crashlytics Beta"
+  lane :beta do
+    gradle(task: "clean assembleRelease")
+    crashlytics
+  
+    # sh "your_script.sh"
+    # You can also use other beta testing services here
+  end
+
+
+
