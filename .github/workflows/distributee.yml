@@ -40,7 +40,7 @@ jobs:
 
     - name: Distribute app with 🔥 App Distribution 🚀
       run:
-           sudo bundle exec fastlane distribute
+           sudo bundle exec fastlane test
       env:
           FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
 
