@@ -37,7 +37,7 @@ jobs:
       run: sudo gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)"
     - name: Distribute app with 🔥 App Distribution 🚀
       run:
-           bundle exec fastlane distribute
+           sudo bundle exec fastlane distribute
       env:
           FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
 
