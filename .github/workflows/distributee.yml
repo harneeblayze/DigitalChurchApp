@@ -52,5 +52,5 @@ jobs:
       env:
           FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
 
-    - name: Run tests
-      run: bundle exec rake
+    #- name: Run tests
+     # run: bundle exec rake
