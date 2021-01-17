@@ -39,7 +39,7 @@ platform :android do
 
   # send slack success notification after distribution completes
           slack(
-            slack_url: "https://hooks.slack.com/services/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",
+            slack_url: "https://hooks.slack.com/services/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",
             message: "New build is available for testing",
             success: true,
             default_payloads: [:git_branch, :last_git_commit_message]
@@ -51,7 +51,7 @@ platform :android do
           # send slack failure notification
           slack(
               message: "Build failed with exception: #{exception}",
-              slack_url: "https://hooks.slack.com/services/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",
+              slack_url: "https://hooks.slack.com/services/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",
               success: false,
               default_payloads: [:git_branch, :last_git_commit_message]
           )
