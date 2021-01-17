@@ -23,7 +23,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Install bundle
+    - name: Install bundlee
       run: |
           bundle config path vendor/bundle
           bundle install --jobs 4 --retry 3
