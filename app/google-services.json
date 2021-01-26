@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "185434120772",
+    "project_id": "digitalchurchapp",
+    "storage_bucket": "digitalchurchapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185434120772:android:6dd6767b3636866ec55211",
+        "android_client_info": {
+          "package_name": "com.example.digitalchurchapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "185434120772-m1l7nmtf8i54tnuoo4ferovka16meo1h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-OhbbLXuEr-ZlL0bRu1_p07XETUvtkaQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "185434120772-m1l7nmtf8i54tnuoo4ferovka16meo1h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
