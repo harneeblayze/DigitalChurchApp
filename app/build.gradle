@@ -15,7 +15,7 @@ android {
         release {
             keyAlias 'keyAlias'
             keyPassword 'harneesyh'
-            storeFile file('harneeblayzekey.jks') // Usually use '../keystore.key'
+            storeFile file('../harneeblayzekey.jks') // Usually use '../keystore.key'
             storePassword 'harneesyh'
         }
     }
