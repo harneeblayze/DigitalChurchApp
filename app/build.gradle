@@ -11,6 +11,15 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.0"
 
+    signingConfigs {
+        config {
+            keyAlias 'keyAlias'
+            keyPassword 'harneesyh'
+            storeFile file('C:\\Users\\Customer\\Desktop\\harneeblayzekey.jks') // Usually use '../keystore.key'
+            storePassword 'harneesyh'
+        }
+    }
+
     defaultConfig {
         applicationId "com.example.digitalchurchapp"
         minSdkVersion 23
@@ -23,7 +32,8 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            signingConfig signingConfigs.config
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
