@@ -12,10 +12,10 @@ android {
     buildToolsVersion "30.0.0"
 
     signingConfigs {
-        config {
+        release {
             keyAlias 'keyAlias'
             keyPassword 'harneesyh'
-            storeFile file('C:\\Users\\Customer\\Desktop\\harneeblayzekey.jks') // Usually use '../keystore.key'
+            storeFile file('harneeblayzekey.jks') // Usually use '../keystore.key'
             storePassword 'harneesyh'
         }
     }
@@ -32,7 +32,7 @@ android {
 
     buildTypes {
         release {
-            signingConfig signingConfigs.config
+            signingConfig signingConfigs.release
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
