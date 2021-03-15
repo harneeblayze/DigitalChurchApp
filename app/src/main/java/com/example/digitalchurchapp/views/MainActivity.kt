@@ -1,4 +1,4 @@
-package com.example.digitalchurchapp
+package com.example.digitalchurchapp.views
 
 import android.animation.Animator
 import android.content.Intent
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
+import com.example.digitalchurchapp.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
