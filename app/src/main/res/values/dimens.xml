@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="loginheadersize">20sp</dimen>
+    <dimen name="loginheadermarginstart">48dp</dimen>
+    <dimen name="loginheadermargintop">65dp</dimen>
+    <dimen name="loginsubheadermargintop">8dp</dimen>
+    <dimen name="loginsubheardertextsize">12sp</dimen>
+    <dimen name="phonenumberheadertxtsize">7sp</dimen>
+    <dimen name="marginbottomphoneheader">4dp</dimen>
+    <dimen name="phoneedittxtinputsize">14sp</dimen>
+    <dimen name="paddingendphoneedittxt">17dp</dimen>
+    <dimen name="paddingtopphoneedittxt">10dp</dimen>
+    <dimen name="paddingbottomphoneedittxt">10dp</dimen>
+    <dimen name="paddingstartphoneedittxt">9dp</dimen>
+    <dimen name="phoneheadermarginstart">9dp</dimen>
+    <dimen name="signinphonemargintop">75dp</dimen>
+    <dimen name="signinphonemarginstart">48dp</dimen>
+    <dimen name="signinphonemarginend">47dp</dimen>
+    <dimen name="signinpasswordmargintop">25dp</dimen>
+    <dimen name="signinpasswordmarginstart">48dp</dimen>
+    <dimen name="signinpasswordmarginend">47dp</dimen>
+    <dimen name="signinusefingerprinttxtmargintop">43dp</dimen>
+    <dimen name="signinusefingerprinttxtsize">14sp</dimen>
+    <dimen name="regusingsize">10sp</dimen>
+</resources>

@@ -1,11 +1,12 @@
-package com.example.digitalchurchapp
+package com.example.digitalchurchapp.views.signup
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.digitalchurchapp.R
 
-class OnboardingActivity : AppCompatActivity() {
+class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_onboarding)
+        setContentView(R.layout.activity_signup)
     }
 }
