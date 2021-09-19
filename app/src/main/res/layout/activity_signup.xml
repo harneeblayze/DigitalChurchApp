@@ -1,130 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".views.signup.SignupActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.airbnb.lottie.LottieAnimationView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_gravity="center"
+        android:id="@+id/spinnball"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/hrglass"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/signup_bg"
+        android:background="#333333"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"/>
 
-        <TextView
-            android:layout_marginTop="@dimen/loginheadermargintop"
-            android:layout_marginStart="@dimen/loginheadermarginstart"
-            android:textFontWeight="700"
-            android:textStyle="bold"
-            android:textSize="@dimen/loginheadersize"
-            android:textColor="@color/teal_700"
-            android:text="Welcome, enter your details to get started"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:layout_marginTop="@dimen/loginsubheadermargintop"
-            android:textSize="@dimen/loginsubheardertextsize"
-            android:layout_marginStart="@dimen/loginheadermarginstart"
-            android:text=""
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bottom_sheet_radius"
+        android:clickable="true"
+        android:focusable="true"
+        android:overScrollMode="never"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="600dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
         <include
-            android:layout_marginTop="@dimen/signinphonemargintop"
-            android:layout_marginStart="@dimen/signinphonemarginstart"
-            android:layout_marginEnd="@dimen/signinphonemarginend"
+            layout="@layout/signup_layout_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            layout="@layout/fullname_item"/>
-
-        <!--<include
-            android:layout_marginTop="@dimen/signinpasswordmargintop"
-            android:layout_marginStart="@dimen/signinpasswordmarginstart"
-            android:layout_marginEnd="@dimen/signinpasswordmarginend"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            layout="@layout/phonesignup_item"/>
--->
-
-        <include
-            android:layout_marginTop="@dimen/signinpasswordmargintop"
-            android:layout_marginStart="@dimen/signinpasswordmarginstart"
-            android:layout_marginEnd="@dimen/signinpasswordmarginend"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            layout="@layout/email_item"/>
-
-
-        <include
-            android:layout_marginTop="@dimen/signinpasswordmargintop"
-            android:layout_marginStart="@dimen/signinpasswordmarginstart"
-            android:layout_marginEnd="@dimen/signinpasswordmarginend"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            layout="@layout/password_layout_item"/>
-
-        <include
-            android:layout_marginTop="@dimen/signinpasswordmargintop"
-            android:layout_marginStart="@dimen/signinpasswordmarginstart"
-            android:layout_marginEnd="@dimen/signinpasswordmarginend"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            layout="@layout/confirmpassword_item"/>
-
-
-        <include
-            android:layout_marginTop="50dp"
-            android:layout_marginStart="51dp"
-            android:layout_marginEnd="@dimen/signinpasswordmarginend"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            layout="@layout/termsandcondition_item"/>
-
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/login"
-            style="@style/Widget.MaterialComponents.Button"
-            android:layout_width="match_parent"
-            android:textAppearance="@style/MineCustomTabText"
-            android:layout_marginStart="@dimen/signinpasswordmarginstart"
-            android:layout_marginEnd="@dimen/signinpasswordmarginend"
-            android:layout_height="wrap_content"
-            app:backgroundTint="@color/teal_200"
-            android:paddingStart="45dp"
-            android:paddingTop="10dp"
-            android:paddingEnd="45dp"
-            android:paddingBottom="10dp"
-            android:text="Sign Up"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginTop="18dp"
-            app:cornerRadius="30dp"
             />
 
-        <TextView
-            android:layout_marginTop="27dp"
-            android:textSize="@dimen/regusingsize"
-            android:layout_gravity="center"
-            android:text="or register using"
-            android:textColor="@color/textitemcolor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
-
-        <include
-            android:layout_marginTop="@dimen/signinpasswordmargintop"
-            android:layout_marginStart="@dimen/signinpasswordmarginstart"
-            android:layout_marginEnd="@dimen/signinpasswordmarginend"
-            android:layout_marginBottom="38dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            layout="@layout/social_signup_layout_item"/>
+    </androidx.core.widget.NestedScrollView>
 
 
 
-    </LinearLayout>
-
-
-
-</ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

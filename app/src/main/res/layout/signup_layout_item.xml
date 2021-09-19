@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="@dimen/loginheadermargintop"
+            android:layout_marginStart="@dimen/loginheadermarginstart"
+            android:layout_marginEnd="47dp"
+            android:textFontWeight="700"
+            android:textStyle="bold"
+            android:textSize="@dimen/loginheadersize"
+            android:textColor="@color/teal_700"
+            android:text="Welcome, enter your details to get started"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/loginsubheadermargintop"
+            android:textSize="@dimen/loginsubheardertextsize"
+            android:layout_marginStart="@dimen/loginheadermarginstart"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <include
+            android:layout_marginTop="@dimen/signinphonemargintop"
+            android:layout_marginStart="@dimen/signinphonemarginstart"
+            android:layout_marginEnd="@dimen/signinphonemarginend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/fullname_item"/>
+
+        <!--<include
+            android:layout_marginTop="@dimen/signinpasswordmargintop"
+            android:layout_marginStart="@dimen/signinpasswordmarginstart"
+            android:layout_marginEnd="@dimen/signinpasswordmarginend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/phonesignup_item"/>
+-->
+
+        <include
+            android:layout_marginTop="@dimen/signinpasswordmargintop"
+            android:layout_marginStart="@dimen/signinpasswordmarginstart"
+            android:layout_marginEnd="@dimen/signinpasswordmarginend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/email_item"/>
+
+
+        <include
+            android:layout_marginTop="@dimen/signinpasswordmargintop"
+            android:layout_marginStart="@dimen/signinpasswordmarginstart"
+            android:layout_marginEnd="@dimen/signinpasswordmarginend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/password_layout_item"/>
+
+        <include
+            android:layout_marginTop="@dimen/signinpasswordmargintop"
+            android:layout_marginStart="@dimen/signinpasswordmarginstart"
+            android:layout_marginEnd="@dimen/signinpasswordmarginend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/confirmpassword_item"/>
+
+
+        <include
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="51dp"
+            android:layout_marginEnd="@dimen/signinpasswordmarginend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/termsandcondition_item"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sign_up"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:textAppearance="@style/MineCustomTabText"
+            android:layout_marginStart="@dimen/signinpasswordmarginstart"
+            android:layout_marginEnd="@dimen/signinpasswordmarginend"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/teal_200"
+            android:paddingStart="45dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="45dp"
+            android:paddingBottom="10dp"
+            android:text="Sign Up"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="18dp"
+            app:cornerRadius="30dp"
+            />
+
+        <TextView
+            android:layout_marginTop="27dp"
+            android:textSize="@dimen/regusingsize"
+            android:layout_gravity="center"
+            android:text="or register using"
+            android:textColor="@color/textitemcolor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <include
+            android:layout_marginTop="@dimen/signinpasswordmargintop"
+            android:layout_marginStart="@dimen/signinpasswordmarginstart"
+            android:layout_marginEnd="@dimen/signinpasswordmarginend"
+            android:layout_marginBottom="38dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/social_signup_layout_item"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

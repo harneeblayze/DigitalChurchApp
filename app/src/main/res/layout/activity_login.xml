@@ -21,7 +21,7 @@
             android:textSize="18sp"
             android:textFontWeight="700"
             android:textColor="#fff"
-            android:text="SignIn to your Church Account"
+            android:text="LOGIN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
